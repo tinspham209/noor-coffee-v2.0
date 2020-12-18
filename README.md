@@ -1,70 +1,134 @@
-# Getting Started with Create React App
+# Project: NOOR Coffee Website v2.0
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Date: Sep - 2020 to present
 
-## Available Scripts
+### Functions
 
-In the project directory, you can run:
+- Homepage
+- List of products
+- Display store in Maps
+- Scan QR Code to delivery on Grab & Loship
+- Membership form
+- Feedback form
+- About us (coming soon)
+- Blog (coming soon)
 
-### `npm start`
+### Screenshot
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img src="" alt="is-developing"/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Releases
 
-### `npm test`
+- https://noordn.cf
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Plan Of Action
 
-### `npm run build`
+### Next Steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Directory Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+.
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── README.md
+├── deploy-firebase
+├── .firebaserc
+├── firebase.json
+├── public
+└── src
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For the project to build, these must exist with exact filenames:
 
-### `npm run eject`
+- `public/index.html` is the page template
+- `src/index.js` is the entry point
+- `src/GlobalStyles.js` is the Global Styles
+- `src/App.js` is the Router
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Installation Guide
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Tech-Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- React Hooks
+- react-router-dom
+- styled-components
+- Firebase
+- react-icons
+- leaflet
+- react-leaflet
+- react-lazy-load-image-component
+- react-sticky-box
+- react-rating-stars-component
+- img design from https://undraw.co/
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Production
 
-## Learn More
+- Clone this project
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+git clone https://github.com/tinspham209/noor-coffee
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Install dependencies
 
-### Code Splitting
+```
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Start the server
 
-### Analyzing the Bundle Size
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Development
 
-### Making a Progressive Web App
+- Clone this project
+- Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+npm install
+```
 
-### Advanced Configuration
+- Start packager
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+npm start
+```
 
-### Deployment
+### Components function:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### How to name a folder and a file
 
-### `npm run build` fails to minify
+- Folder name: - Ex: `InfoSection`
+- Component file name: should be -- Ex: `InfoSection.jsx`
+- Style component file name: should be -- Ex: `InfoSection.elements.js`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### How to import and export module?
+
+- Import:
+
+```js
+//import every thing
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+
+//for default export
+import InfoSection from "./InfoSection";
+
+//for named export
+import { InfoSec, InfoRow } from "./InfoSection.elements";
+```
+
+### How to style for each component?
+
+- Create a styled-component file. Ex: `InfoSection.elements.js`
+- Import to `jsx` file
+
+```js
+// InfoSection.jsx
+
+import { InfoSec, InfoRow } from "./InfoSection.elements";
+```
