@@ -25,6 +25,10 @@
 
 ### Next Steps:
 
+### Bugs:
+
+- Logo Img on `navbar` & `footer` has margin on IOS devices
+
 ### Directory Structure
 
 ```
