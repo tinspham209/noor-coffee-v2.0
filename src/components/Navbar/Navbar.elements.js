@@ -34,6 +34,7 @@ export const useStyles = makeStyles((theme) => ({
 
 		display: "inline-block",
 		verticalAlign: "middle",
+		objectFit: "contain",
 	},
 
 	nav__mobileIcon: {
@@ -55,7 +56,6 @@ export const useStyles = makeStyles((theme) => ({
 
 	nav__menu: {
 		display: "flex",
-		flexDirection: "row",
 		alignItems: "center",
 		textAlign: "center",
 		zIndex: 999,
