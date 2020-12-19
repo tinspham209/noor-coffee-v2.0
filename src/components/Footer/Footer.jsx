@@ -21,10 +21,10 @@ const Footer = () => {
 					</NavLink>
 					<div className={classes.footer__center}>
 						<div className={classes.footer__centerText}>
-							Copyright © 2020 Noor Coffee & Tea
+							Noor Coffee & Tea @ 2020.
 						</div>
 						<div className={classes.footer__centerText}>
-							Design by :{" "}
+							Made with ♥ by:{" "}
 							<a
 								href="http://tinspham.info/"
 								target="__blank"
