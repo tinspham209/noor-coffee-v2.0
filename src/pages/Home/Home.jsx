@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import { Slider, InfoSection } from "../../components";
-
+import { FullPage, InfoSection } from "../../components";
 const Home = () => {
 	useEffect(() => {
 		document.title = "Noor - Coffee & Tea";
@@ -8,7 +7,7 @@ const Home = () => {
 
 	return (
 		<div>
-			<Slider />
+			<FullPage />
 			<InfoSection />
 		</div>
 	);
