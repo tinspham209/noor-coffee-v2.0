@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import background from "../../assets/img/anh-bia.webp";
+import backgroundMobile from "../../assets/img/background-mobile.webp";
 
 export const useStyles = makeStyles((theme) => ({
 	slider: {
@@ -10,6 +11,10 @@ export const useStyles = makeStyles((theme) => ({
 		alignItems: "center",
 		background: `url(${background}) center center/cover no-repeat`,
 		backgroundColor: "#cab9a9",
+
+		[theme.breakpoints.down("md")]: {
+			background: `url(${backgroundMobile}) center center/cover no-repeat`,
+		},
 	},
 	fixedScrollDown: {
 		position: "absolute",
