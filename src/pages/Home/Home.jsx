@@ -1,15 +1,10 @@
-import React, { useEffect } from "react";
-import { FullPage, InfoSection } from "../../components";
+import React from "react";
+import HomeContainer from "../../containers/Home/Home";
 const Home = () => {
-	useEffect(() => {
-		document.title = "Noor - Coffee & Tea";
-	}, []);
-
 	return (
-		<div>
-			<FullPage />
-			<InfoSection />
-		</div>
+		<>
+			<HomeContainer />
+		</>
 	);
 };
 
