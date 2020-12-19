@@ -4,12 +4,14 @@ export const useStyles = makeStyles((theme) => ({
 	nav: {
 		background: "#101522",
 		height: "80px",
+		flexGrow: 1,
 	},
 
 	appBar: {
 		display: "flex",
+		flexDirection: "row !important",
 		justifyContent: "space-between",
-		flexDirection: "row",
+		alignItems: "center",
 		fontSize: "20px",
 	},
 
