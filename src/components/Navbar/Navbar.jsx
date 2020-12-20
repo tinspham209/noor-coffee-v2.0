@@ -26,8 +26,8 @@ const Navbar = () => {
 					<Container maxWidth="lg">
 						<AppBar
 							className={classes.appBar}
-							position="static"
-							color="transparent"
+							position="fixed"
+							style={{ background: "#101522" }}
 						>
 							<NavLink to="/" className={classes.nav__logo}>
 								<img
