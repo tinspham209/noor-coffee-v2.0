@@ -1,33 +1,41 @@
 import React, { useEffect, useState } from "react";
-import { FullPage, InfoSection } from "../../components";
-import sanityClient from "../../client";
+import { FullPage, InfoSection, Spinner } from "../../components";
+import { setAboutData } from "../../app/slice/fetchApi";
+import { useDispatch } from "react-redux";
+import { fetchAboutData } from "../../api";
+
 const Home = () => {
-	const [aboutData, setAboutData] = useState(null);
+	const [spinner, setSpinner] = useState(true);
+	const dispatch = useDispatch();
 
 	useEffect(() => {
 		document.title = "Noor - Coffee & Tea";
-		sanityClient
-			.fetch(
-				`*[_type == "about"]{
-			title,
-			body,
-			mainImage{
-				asset->{
-					_id,
-					url
-				},
-				alt
-			}
-		}`
-			)
-			.then((data) => setAboutData(data[0]))
+
+		fetchAboutData()
+			.then((data) => {
+				console.log("data: ", data);
+				const action = setAboutData(data);
+				dispatch(action);
+			})
 			.catch((error) => console.log("error", error));
+	}, [dispatch]);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setSpinner(false);
+		}, 1000);
 	}, []);
 
 	return (
 		<div>
-			<FullPage />
-			<InfoSection data={aboutData} />
+			{spinner ? (
+				<Spinner />
+			) : (
+				<>
+					<FullPage />
+					<InfoSection />
+				</>
+			)}
 		</div>
 	);
 };
