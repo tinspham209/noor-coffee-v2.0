@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FullPage, InfoSection, Spinner } from "../../components";
+import { FullPage, InfoMaps, InfoSection, Spinner } from "../../components";
 import { setAboutData } from "../../app/slice/fetchApi";
 import { useDispatch } from "react-redux";
 import { fetchAboutData } from "../../api";
@@ -34,6 +34,7 @@ const Home = () => {
 				<>
 					<FullPage />
 					<InfoSection />
+					<InfoMaps />
 				</>
 			)}
 		</div>
