@@ -8,20 +8,25 @@ import React from "react";
 import { useStyles } from "./InfoSection.elements";
 import { Link } from "react-router-dom";
 import BlockContent from "@sanity/block-content-to-react";
+import { useSelector } from "react-redux";
 
-const InfoSection = ({ data }) => {
-	console.log("data: ", data);
+const InfoSection = () => {
+	const aboutData = useSelector((state) => state.api.about);
 
 	const classes = useStyles();
 	return (
 		<div className={classes.info}>
-			{data ? (
+			{!aboutData ? (
+				<div className={classes.spinner}>
+					<CircularProgress />
+				</div>
+			) : (
 				<Container maxWidth="lg">
 					<div className={classes.infoRow}>
 						<div className={classes.infoColumn}>
 							<div className={classes.imgWrapper}>
 								<img
-									src={data.mainImage.asset.url}
+									src={aboutData.mainImage.asset.url}
 									alt="imgWrapper"
 									className={classes.img}
 								/>
@@ -33,11 +38,11 @@ const InfoSection = ({ data }) => {
 						<div className={classes.infoColumn}>
 							<div className={classes.textWrapper}>
 								<Typography variant="h4" className={classes.text}>
-									{data.title}
+									{aboutData.title}
 								</Typography>
 								<div>
 									<BlockContent
-										blocks={data.body}
+										blocks={aboutData.body}
 										projectId="1nauekv7"
 										dataset="production"
 									/>
@@ -51,10 +56,6 @@ const InfoSection = ({ data }) => {
 						</div>
 					</div>
 				</Container>
-			) : (
-				<div className={classes.spinner}>
-					<CircularProgress />
-				</div>
 			)}
 		</div>
 	);
