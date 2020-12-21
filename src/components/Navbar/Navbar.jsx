@@ -23,81 +23,79 @@ const Navbar = () => {
 		<>
 			<IconContext.Provider value={{ color: "#fff" }}>
 				<div className={classes.nav}>
-					<Container maxWidth="lg">
-						<AppBar
-							className={classes.appBar}
-							position="fixed"
-							style={{ background: "#101522" }}
-						>
-							<NavLink to="/" className={classes.nav__logo}>
-								<img
-									src={logoImg}
-									alt="logoImg"
-									className={classes.nav__logoImg}
-									onClick={closeMobileMenu}
-								/>
-							</NavLink>
-							<div className={classes.nav__mobileIcon} onClick={handleClick}>
-								{click ? <FaTimes /> : <FaBars />}
+					<AppBar position="fixed" style={{ background: "#101522" }}>
+						<Container maxWidth="lg">
+							<div className={classes.appBar}>
+								<NavLink to="/" className={classes.nav__logo}>
+									<img
+										src={logoImg}
+										alt="logoImg"
+										className={classes.nav__logoImg}
+										onClick={closeMobileMenu}
+									/>
+								</NavLink>
+								<div className={classes.nav__mobileIcon} onClick={handleClick}>
+									{click ? <FaTimes /> : <FaBars />}
+								</div>
+								<ul
+									className={classes.nav__menu}
+									onClick={handleClick}
+									style={{ left: `${click ? 0 : "-100%"}` }}
+								>
+									<li className={classes.nav__item}>
+										<NavLink to="/" className={classes.nav__link}>
+											Trang Chủ
+										</NavLink>
+									</li>
+									<li className={classes.nav__item}>
+										<NavLink
+											to="/products"
+											className={classes.nav__link}
+											activeClassName={classes.activeClass}
+										>
+											Sản phẩm
+										</NavLink>
+									</li>
+									<li className={classes.nav__item}>
+										<NavLink
+											to="/blog"
+											className={classes.nav__link}
+											activeClassName={classes.activeClass}
+										>
+											Tin tức
+										</NavLink>
+									</li>
+									<li className={classes.nav__item}>
+										<NavLink
+											to="/stores"
+											className={classes.nav__link}
+											activeClassName={classes.activeClass}
+										>
+											Cửa hàng
+										</NavLink>
+									</li>
+									<li className={classes.nav__item}>
+										<NavLink
+											to="/membership"
+											className={classes.nav__link}
+											activeClassName={classes.activeClass}
+										>
+											Thành viên
+										</NavLink>
+									</li>
+									<li className={classes.nav__item}>
+										<NavLink
+											to="/about"
+											className={classes.nav__link}
+											activeClassName={classes.activeClass}
+										>
+											Về chúng tôi
+										</NavLink>
+									</li>
+								</ul>
 							</div>
-							<ul
-								className={classes.nav__menu}
-								onClick={handleClick}
-								style={{ left: `${click ? 0 : "-100%"}` }}
-							>
-								<li className={classes.nav__item}>
-									<NavLink to="/" className={classes.nav__link}>
-										Trang Chủ
-									</NavLink>
-								</li>
-								<li className={classes.nav__item}>
-									<NavLink
-										to="/products"
-										className={classes.nav__link}
-										activeClassName={classes.activeClass}
-									>
-										Sản phẩm
-									</NavLink>
-								</li>
-								<li className={classes.nav__item}>
-									<NavLink
-										to="/blog"
-										className={classes.nav__link}
-										activeClassName={classes.activeClass}
-									>
-										Tin tức
-									</NavLink>
-								</li>
-								<li className={classes.nav__item}>
-									<NavLink
-										to="/stores"
-										className={classes.nav__link}
-										activeClassName={classes.activeClass}
-									>
-										Cửa hàng
-									</NavLink>
-								</li>
-								<li className={classes.nav__item}>
-									<NavLink
-										to="/membership"
-										className={classes.nav__link}
-										activeClassName={classes.activeClass}
-									>
-										Thành viên
-									</NavLink>
-								</li>
-								<li className={classes.nav__item}>
-									<NavLink
-										to="/about"
-										className={classes.nav__link}
-										activeClassName={classes.activeClass}
-									>
-										Về chúng tôi
-									</NavLink>
-								</li>
-							</ul>
-						</AppBar>
-					</Container>
+						</Container>
+					</AppBar>
 				</div>
 			</IconContext.Provider>
 		</>

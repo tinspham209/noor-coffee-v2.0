@@ -4,7 +4,6 @@ export const useStyles = makeStyles((theme) => ({
 	nav: {
 		background: "#101522",
 		height: "80px",
-		flexGrow: 1,
 	},
 
 	appBar: {
@@ -40,7 +39,6 @@ export const useStyles = makeStyles((theme) => ({
 
 		display: "inline-block",
 		verticalAlign: "middle",
-		objectFit: "container",
 	},
 
 	nav__mobileIcon: {
