@@ -13,7 +13,7 @@ const HighlightPosts = () => {
 	const classes = useStyles();
 
 	const posts = useSelector((state) => state.api.posts);
-	const postsSlice = posts.slice(1, 4);
+	const postsSlice = posts ? posts.slice(1, 4) : null;
 
 	return (
 		<div className={classes.highlightPosts}>
