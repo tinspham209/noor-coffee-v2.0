@@ -47,10 +47,8 @@ export const useStyles = makeStyles((theme) => ({
 		border: 0,
 
 		maxWidth: "100%",
-		maxHeight: "500px",
-
-		display: "inline-block",
-		verticalAlign: "middle",
+		maxHeight: "400px",
+		objectFit: "cover",
 	},
 
 	imgAbout: {
