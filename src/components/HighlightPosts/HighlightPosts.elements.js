@@ -1,10 +1,11 @@
 import { makeStyles } from "@material-ui/core/styles";
+import bgImg from "../../assets/img/bg-white.webp";
 
 export const useStyles = makeStyles((theme) => ({
 	highlightPosts: {
 		color: "black",
 		padding: "80px 0",
-		background: "#f5f5f5",
+		background: `url(${bgImg}) no-repeat right top, #f5f5f5`,
 		[theme.breakpoints.down("md")]: {},
 	},
 	header: {
