@@ -58,6 +58,14 @@ export const useStyles = makeStyles((theme) => ({
 	text: {
 		color: "#ea8025",
 		fontWeight: 600,
+		position: "relative",
+		"&::before": {
+			content: '""',
+			position: "absolute",
+			bottom: "-10px",
+			width: "150px",
+			border: "2px solid #ea8025",
+		},
 	},
 	subTitle: {
 		color: "white",
