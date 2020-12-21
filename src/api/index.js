@@ -45,3 +45,24 @@ export const fetchBlogData = async () => {
 		})
 		.catch((error) => console.log("error", error));
 };
+
+export const fetchInstaPost = async () => {
+	return await sanityClient
+		.fetch(
+			`*[_type == "insta"]{
+			publishedAt,
+			url,
+			mainImage{
+				asset->{
+					_id,
+					url
+				},
+				alt
+			}
+		}`
+		)
+		.then((data) => {
+			return data;
+		})
+		.catch((error) => console.log("error", error));
+};
