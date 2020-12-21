@@ -37,6 +37,11 @@ export default {
 			type: "datetime",
 		},
 		{
+			name: "description",
+			title: "Short Description",
+			type: "string",
+		},
+		{
 			name: "body",
 			title: "Body",
 			type: "blockContent",
