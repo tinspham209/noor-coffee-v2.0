@@ -9,6 +9,7 @@ const fetchApi = createSlice({
 			special: [],
 			coffee: [],
 		},
+		posts: null,
 	},
 	reducers: {
 		setAboutData: (state, action) => {
@@ -17,11 +18,14 @@ const fetchApi = createSlice({
 		setProductSpecial: (state, action) => {
 			state.products.special = action.payload;
 		},
+		setPosts: (state, action) => {
+			state.posts = action.payload;
+		},
 	},
 });
 
 const { reducer, actions } = fetchApi;
 
-export const { setAboutData, setProductSpecial } = actions;
+export const { setAboutData, setProductSpecial, setPosts } = actions;
 
 export default reducer;
