@@ -111,6 +111,12 @@ export const useStyles = makeStyles((theme) => ({
 
 		borderRadius: "10px",
 		minHeight: "342px",
+
+		transition: "all .2s ease-in-out",
+
+		"&:hover": {
+			transform: "scale(1.05)",
+		},
 	},
 
 	postLink: {
