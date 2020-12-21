@@ -20,3 +20,28 @@ export const fetchAboutData = async () => {
 		})
 		.catch((error) => console.log("error", error));
 };
+
+export const fetchBlogData = async () => {
+	return await sanityClient
+		.fetch(
+			`*[_type == "post"]{
+				title,
+				slug,
+				author,
+				mainImage{
+					asset->{
+						_id,
+						url
+					},
+					alt
+				},
+				body,
+				publishedAt,
+				description
+			}`
+		)
+		.then((data) => {
+			return data;
+		})
+		.catch((error) => console.log("error", error));
+};
