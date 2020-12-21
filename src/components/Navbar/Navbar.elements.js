@@ -25,18 +25,22 @@ export const useStyles = makeStyles((theme) => ({
 		justifySelf: "flex-start",
 		alignItems: "center",
 
+		border: "none",
+		outline: "none",
+
 		cursor: "pointer",
 	},
 
 	nav__logoImg: {
-		height: "60px",
-		border: 0,
+		height: "100%",
+		border: "none",
+		outline: "none",
 
 		padding: "10px",
 
 		display: "inline-block",
 		verticalAlign: "middle",
-		objectFit: "contain",
+		objectFit: "container",
 	},
 
 	nav__mobileIcon: {

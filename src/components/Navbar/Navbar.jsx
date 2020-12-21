@@ -4,7 +4,7 @@ import { IconContext } from "react-icons/lib";
 import { NavLink } from "react-router-dom";
 import { useStyles } from "./Navbar.elements";
 
-import logoImg from "../../assets/img/logo-web-white.png";
+import logoImg from "../../assets/img/logoMain.png";
 import { AppBar, Container } from "@material-ui/core";
 
 const Navbar = () => {
