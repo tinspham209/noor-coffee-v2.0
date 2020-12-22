@@ -66,3 +66,24 @@ export const fetchInstaPost = async () => {
 		})
 		.catch((error) => console.log("error", error));
 };
+
+export const fetchHeroData = async () => {
+	return await sanityClient
+		.fetch(
+			`*[_type == "hero"]{
+			title,
+			subTitle,
+			mainImage{
+				asset->{
+					_id,
+					url
+				},
+				alt
+			}
+		}`
+		)
+		.then((data) => {
+			return data;
+		})
+		.catch((error) => console.log("error", error));
+};
