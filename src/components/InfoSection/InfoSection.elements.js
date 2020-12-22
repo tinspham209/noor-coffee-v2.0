@@ -88,19 +88,21 @@ export const useStyles = makeStyles((theme) => ({
 		},
 	},
 	text: {
-		color: "#ea8025",
+		color: "rgba(246,194,73, 1)",
 		fontWeight: 600,
 	},
 	subTitle: {},
 	button: {
 		borderRadius: "20px",
 		fontSize: "20px",
-		background: "#f5a561",
+		background: "rgba(246,194,73, 1)",
 		color: "white",
 		fontWeight: "bold",
+		transition: "all 0.3s ease-in-out",
 
 		"&:hover": {
-			background: "rgba(245,165,97,0.9)",
+			background: "rgba(246,194,73, 0.9)",
+			color: "black",
 		},
 
 		[theme.breakpoints.down("md")]: {
