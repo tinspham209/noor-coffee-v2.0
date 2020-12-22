@@ -1,5 +1,11 @@
-import { CircularProgress, Container, Typography } from "@material-ui/core";
+import {
+	Button,
+	CircularProgress,
+	Container,
+	Typography,
+} from "@material-ui/core";
 import React from "react";
+import { FaInstagram } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { useStyles } from "./InstaPosts.elements";
 
@@ -50,6 +56,20 @@ const InstaPosts = () => {
 									/>
 								</a>
 							))}
+						</div>
+						<div className={classes.footer}>
+							<a
+								href="https://instagram.com/noorcoffeedn"
+								target="__blank"
+								aria-label="Instagram"
+							>
+								<Button variant="contained" className={classes.button}>
+									<span className={classes.iconInsta}>
+										<FaInstagram />
+									</span>{" "}
+									View on Instagram
+								</Button>
+							</a>
 						</div>
 					</div>
 				</Container>

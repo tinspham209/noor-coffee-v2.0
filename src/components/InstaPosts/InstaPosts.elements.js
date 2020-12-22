@@ -25,7 +25,7 @@ export const useStyles = makeStyles((theme) => ({
 		marginBottom: "20px",
 	},
 	headerText: {
-		color: "#ea8025",
+		color: "rgba(246,194,73, 1)",
 		fontWeight: 600,
 		position: "relative",
 		marginBottom: "10px",
@@ -35,7 +35,7 @@ export const useStyles = makeStyles((theme) => ({
 			position: "absolute",
 			bottom: "-4px",
 			width: "100%",
-			border: "2px solid #ea8025",
+			border: "2px solid rgba(246,194,73, 1)",
 		},
 	},
 	headerSubtitleWrapper: {
@@ -96,5 +96,36 @@ export const useStyles = makeStyles((theme) => ({
 		"&:hover": {
 			transform: "scale(1.1)",
 		},
+	},
+	footer: {
+		marginTop: "20px",
+	},
+	button: {
+		minWidth: "350px",
+
+		borderRadius: "20px",
+		background: "rgba(246,194,73, 1)",
+
+		color: "white",
+		fontSize: "20px",
+		fontWeight: "bold",
+
+		transition: "all 0.3s ease-in-out",
+
+		"&:hover": {
+			background: "rgba(246,194,73, 0.9)",
+			color: "black",
+		},
+
+		[theme.breakpoints.down("md")]: {
+			width: "100%",
+		},
+	},
+	iconInsta: {
+		fontSize: "24px",
+		marginRight: "10px",
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
 	},
 }));
