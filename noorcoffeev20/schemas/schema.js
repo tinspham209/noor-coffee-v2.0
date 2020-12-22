@@ -11,6 +11,7 @@ import about from "./about";
 import author from "./author";
 import product from "./product";
 import insta from "./insta";
+import hero from "./hero";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -26,6 +27,7 @@ export default createSchema({
 		about,
 		product,
 		insta,
+		hero,
 		// When added to this list, object types can be used as
 		// { type: 'typename' } in other document schemas
 		blockContent,
