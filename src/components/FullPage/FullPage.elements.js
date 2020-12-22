@@ -84,9 +84,11 @@ export const useStyles = makeStyles((theme) => ({
 		fontSize: "56px",
 		textTransform: "uppercase",
 		fontFamily: '"BebasNeue","Lato", san-serif',
+		letterSpacing: "10px",
 
 		[theme.breakpoints.down("md")]: {
 			fontSize: "32px",
+			letterSpacing: "3px",
 		},
 	},
 	sliderButton: {
