@@ -43,12 +43,15 @@ export const useStyles = makeStyles((theme) => ({
 	},
 
 	img: {
+		borderRadius: "20px",
+		borderBottomLeftRadius: "0",
 		paddingRight: 0,
 		border: 0,
 
 		maxWidth: "100%",
 		maxHeight: "400px",
 		objectFit: "cover",
+		display: "block",
 	},
 
 	imgAbout: {
