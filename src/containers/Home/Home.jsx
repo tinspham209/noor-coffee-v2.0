@@ -9,22 +9,39 @@ import {
 } from "../../components";
 import {
 	setAboutData,
+	setHero,
 	setInstaPosts,
 	setPosts,
 } from "../../app/slice/fetchApi";
 import { useDispatch } from "react-redux";
-import { fetchAboutData, fetchBlogData, fetchInstaPost } from "../../api";
+import {
+	fetchAboutData,
+	fetchBlogData,
+	fetchHeroData,
+	fetchInstaPost,
+} from "../../api";
 
 const Home = () => {
 	const [spinner, setSpinner] = useState(true);
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		document.title = "Noor - Coffee & Tea";
+		document.title = "NOOR - Coffee & Tea - Coworking Cafe";
+	}, []);
 
-		fetchAboutData()
+	useEffect(() => {
+		fetchHeroData()
 			.then((data) => {
 				console.log("data: ", data);
+				const action = setHero(data);
+				dispatch(action);
+			})
+			.catch((error) => console.log("error", error));
+	}, [dispatch]);
+
+	useEffect(() => {
+		fetchAboutData()
+			.then((data) => {
 				const action = setAboutData(data);
 				dispatch(action);
 			})
@@ -49,7 +66,6 @@ const Home = () => {
 	useEffect(() => {
 		fetchInstaPost()
 			.then((instaPosts) => {
-				console.log("instaPosts: ", instaPosts);
 				let postsSort = [];
 				postsSort = instaPosts.slice().sort((value1, value2) => {
 					const dateValue1 = new Date(value1.publishedAt).getTime();
