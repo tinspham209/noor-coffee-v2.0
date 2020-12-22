@@ -7,6 +7,7 @@ import {
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { estimateReadingTime } from "../../utils";
 import { useStyles } from "./HighlightPosts.elements";
 
 const HighlightPosts = () => {
@@ -46,11 +47,16 @@ const HighlightPosts = () => {
 						<div className={classes.content}>
 							<p className={classes.title}>{posts[0].title}</p>
 							<p className={classes.description}>{posts[0].description}</p>
-							<Link to="/blog">
-								<Button variant="contained" className={classes.button}>
-									Xem thêm
-								</Button>
-							</Link>
+							<div className={classes.footer}>
+								<Link to="/blog">
+									<Button variant="contained" className={classes.button}>
+										Xem thêm
+									</Button>
+								</Link>
+								<p className={classes.description}>
+									{estimateReadingTime(posts[0].body)}
+								</p>
+							</div>
 						</div>
 					</div>
 					<div className={classes.posts}>
@@ -68,11 +74,16 @@ const HighlightPosts = () => {
 								<div className={classes.content}>
 									<p className={classes.title}>{post.title}</p>
 									<p className={classes.description}>{post.description}</p>
-									<Link to="/blog">
-										<Button variant="contained" className={classes.button}>
-											Xem thêm
-										</Button>
-									</Link>
+									<div className={classes.footer}>
+										<Link to="/blog">
+											<Button variant="contained" className={classes.button}>
+												Xem thêm
+											</Button>
+										</Link>
+										<p className={classes.description}>
+											{estimateReadingTime(post.body)}
+										</p>
+									</div>
 								</div>
 							</div>
 						))}
