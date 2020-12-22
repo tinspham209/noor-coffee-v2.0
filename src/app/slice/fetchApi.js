@@ -11,6 +11,7 @@ const fetchApi = createSlice({
 		},
 		posts: null,
 		instaPosts: null,
+		hero: null,
 	},
 	reducers: {
 		setAboutData: (state, action) => {
@@ -25,6 +26,9 @@ const fetchApi = createSlice({
 		setInstaPosts: (state, action) => {
 			state.instaPosts = action.payload;
 		},
+		setHero: (state, action) => {
+			state.hero = action.payload;
+		},
 	},
 });
 
@@ -35,6 +39,7 @@ export const {
 	setProductSpecial,
 	setPosts,
 	setInstaPosts,
+	setHero,
 } = actions;
 
 export default reducer;
