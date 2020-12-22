@@ -10,7 +10,7 @@ const FullPage = () => {
 
 	const slides = useSelector((state) => state.api.hero);
 	const [current, setCurrent] = useState(0);
-	const length = slides.length;
+	const length = slides ? slides.length : null;
 	const timeout = useRef(null);
 
 	useEffect(() => {
