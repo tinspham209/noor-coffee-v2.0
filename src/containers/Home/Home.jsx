@@ -5,7 +5,7 @@ import {
 	InfoMaps,
 	InfoSection,
 	InstaPosts,
-	Spinner,
+	SpinnerBook,
 } from "../../components";
 import {
 	setAboutData,
@@ -87,7 +87,7 @@ const Home = () => {
 	return (
 		<div>
 			{spinner ? (
-				<Spinner />
+				<SpinnerBook />
 			) : (
 				<>
 					<FullPage />
