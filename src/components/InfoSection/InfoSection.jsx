@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import BlockContent from "@sanity/block-content-to-react";
 import { useSelector } from "react-redux";
 import { Element } from "react-scroll";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const InfoSection = () => {
 	const aboutData = useSelector((state) => state.api.about);
@@ -27,7 +28,7 @@ const InfoSection = () => {
 						<div className={classes.infoRow}>
 							<div className={classes.infoColumn}>
 								<div className={classes.imgWrapper}>
-									<img
+									<LazyLoadImage
 										src={aboutData.mainImage.asset.url}
 										alt="imgWrapper"
 										className={classes.img}
