@@ -1,7 +1,6 @@
 .blocks {
 	height: calc(100vh - 80px);
 	width: 100vw;
-	background: linear-gradient(DodgerBlue 0%, #b7dbff 50%, white 50%);
 	overflow: hidden;
 	--primary: #fff;
 	min-height: 100vh;
@@ -11,7 +10,7 @@
 	align-items: center;
 	-webkit-box-pack: center;
 	justify-content: center;
-	background: #663399;
+	background: rgba(246, 194, 73, 0.8);
 }
 
 /**
