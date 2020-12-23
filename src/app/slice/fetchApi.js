@@ -6,8 +6,13 @@ const fetchApi = createSlice({
 	initialState: {
 		about: null,
 		products: {
-			special: [],
-			coffee: [],
+			special: null,
+			coffee: null,
+			coldbrew: null,
+			tea: null,
+			macchiato: null,
+			yogurt: null,
+			juice: null,
 		},
 		posts: null,
 		instaPosts: null,
@@ -16,9 +21,6 @@ const fetchApi = createSlice({
 	reducers: {
 		setAboutData: (state, action) => {
 			state.about = action.payload;
-		},
-		setProductSpecial: (state, action) => {
-			state.products.special = action.payload;
 		},
 		setPosts: (state, action) => {
 			state.posts = action.payload;
@@ -29,6 +31,27 @@ const fetchApi = createSlice({
 		setHero: (state, action) => {
 			state.hero = action.payload;
 		},
+		setProductSpecial: (state, action) => {
+			state.products.special = action.payload;
+		},
+		setProductCoffee: (state, action) => {
+			state.products.coffee = action.payload;
+		},
+		setProductColdbrew: (state, action) => {
+			state.products.coldbrew = action.payload;
+		},
+		setProductTea: (state, action) => {
+			state.products.tea = action.payload;
+		},
+		setProductMacchiato: (state, action) => {
+			state.products.macchiato = action.payload;
+		},
+		setProductYogurt: (state, action) => {
+			state.products.yogurt = action.payload;
+		},
+		setProductJuice: (state, action) => {
+			state.products.juice = action.payload;
+		},
 	},
 });
 
@@ -36,10 +59,16 @@ const { reducer, actions } = fetchApi;
 
 export const {
 	setAboutData,
-	setProductSpecial,
 	setPosts,
 	setInstaPosts,
 	setHero,
+	setProductSpecial,
+	setProductCoffee,
+	setProductColdbrew,
+	setProductTea,
+	setProductMacchiato,
+	setProductYogurt,
+	setProductJuice,
 } = actions;
 
 export default reducer;
