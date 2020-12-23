@@ -8,6 +8,8 @@ import React from "react";
 import { FaInstagram } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { useStyles } from "./InstaPosts.elements";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const InstaPosts = () => {
 	const classes = useStyles();
@@ -49,10 +51,11 @@ const InstaPosts = () => {
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<img
+									<LazyLoadImage
 										src={post.mainImage.asset.url}
 										alt={post.mainImage.asset.alt}
 										className={classes.img}
+										effect="opacity"
 									/>
 								</a>
 							))}
