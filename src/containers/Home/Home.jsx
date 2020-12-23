@@ -143,7 +143,7 @@ const Home = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			setSpinner(false);
-		}, 3000);
+		}, 2500);
 	}, []);
 
 	return (
