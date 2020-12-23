@@ -35,6 +35,21 @@ export default {
 			},
 		},
 		{
+			name: "special",
+			title: "Special",
+			type: "boolean",
+		},
+		{
+			name: "new",
+			title: "New",
+			type: "boolean",
+		},
+		{
+			name: "bestSeller",
+			title: "Best Seller",
+			type: "boolean",
+		},
+		{
 			name: "price",
 			title: "Price",
 			type: "number",
