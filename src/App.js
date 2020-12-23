@@ -6,6 +6,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import GlobalStyle from "./GlobalStyle";
 const Home = React.lazy(() => import("./pages/Home/Home"));
 const Blog = React.lazy(() => import("./pages/Blog/Blog"));
+const Products = React.lazy(() => import("./pages/Products/Products"));
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 				<Switch>
 					<Route path="/" exact component={Home} />
 					<Route path="/blog" exact component={Blog} />
+					<Route path="/products" exact component={Products} />
 					<Route component={NotFound} />
 				</Switch>
 				<Footer />
