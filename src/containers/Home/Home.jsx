@@ -81,7 +81,7 @@ const Home = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			setSpinner(false);
-		}, 1000);
+		}, 3000);
 	}, []);
 
 	return (
