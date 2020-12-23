@@ -29,7 +29,7 @@
 	height: calc(var(--size) * 1px);
 	width: calc(var(--size) * 1px);
 	border-radius: 100%;
-	border: calc(var(--size) / 4 * 1px) solid rgba(255, 255, 255, 0.05);
+	border: calc(var(--size) / 4 * 1px) solid rgba(0, 0, 0, 0.05);
 	position: absolute;
 	top: 0;
 	left: 0;
