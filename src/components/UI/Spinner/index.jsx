@@ -3,8 +3,10 @@ import "./style.css";
 const Spinner = () => {
 	return (
 		<div className="blocks">
-			<div className="block orange"></div>
-			<div className="block blue"></div>
+			<div class="infinity-path">
+				<div></div>
+				<div></div>
+			</div>
 		</div>
 	);
 };
