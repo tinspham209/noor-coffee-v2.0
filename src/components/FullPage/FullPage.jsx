@@ -4,6 +4,7 @@ import { useStyles } from "./FullPage.elements";
 import { BiMouse } from "react-icons/bi";
 import { useSelector } from "react-redux";
 import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
+import { scroller } from "react-scroll";
 
 const FullPage = () => {
 	const classes = useStyles();
@@ -39,6 +40,10 @@ const FullPage = () => {
 		}
 
 		setCurrent(current === 0 ? length - 1 : current - 1);
+	};
+
+	const scrollToNextSection = () => {
+		scroller.scrollTo("infoSection", { smooth: true, duration: 1000 });
 	};
 
 	if (!Array.isArray(slides) || slides.length <= 0) {
@@ -80,7 +85,7 @@ const FullPage = () => {
 								<Typography variant="h6" className={classes.typo}>
 									KÉO XUỐNG
 								</Typography>
-								<div className={classes.icon}>
+								<div className={classes.icon} onClick={scrollToNextSection}>
 									<BiMouse />
 								</div>
 							</div>
