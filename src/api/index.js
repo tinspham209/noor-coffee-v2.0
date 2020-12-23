@@ -87,3 +87,30 @@ export const fetchHeroData = async () => {
 		})
 		.catch((error) => console.log("error", error));
 };
+
+export const fetchProduct = async () => {
+	return await sanityClient
+		.fetch(
+			`*[_type == "product"]{
+			title,
+			slug,
+			projectType,
+			special,
+			new,
+			bestSeller,
+			price,
+			body,
+			mainImage{
+				asset->{
+					_id,
+					url
+				},
+				alt
+			}
+		}`
+		)
+		.then((data) => {
+			return data;
+		})
+		.catch((error) => console.log("error", error));
+};
