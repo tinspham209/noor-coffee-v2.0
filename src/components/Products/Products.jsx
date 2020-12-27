@@ -1,5 +1,4 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import {
 	CircularProgress,
 	Container,
@@ -13,13 +12,13 @@ import { AiOutlineLike } from "react-icons/ai";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-const Products = () => {
+const Products = (listProducts) => {
 	const classes = useStyles();
-	const special = useSelector((state) => state.api.products.special);
+	const products = listProducts.products;
 
 	return (
 		<div className={classes.products}>
-			{!special ? (
+			{!products ? (
 				<div className={classes.spinner}>
 					<CircularProgress />
 				</div>
@@ -36,7 +35,7 @@ const Products = () => {
 						</Link>
 					</div>
 					<div className={classes.listProduct}>
-						{special.map((product, index) => (
+						{products.map((product, index) => (
 							<div className={classes.product} key={index}>
 								<div className={classes.productImage}>
 									<Link to="/products">
