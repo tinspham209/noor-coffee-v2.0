@@ -13,13 +13,8 @@ import {
 	setHero,
 	setInstaPosts,
 	setPosts,
-	setProductCoffee,
-	setProductColdbrew,
-	setProductJuice,
-	setProductMacchiato,
+	setProductsList,
 	setProductSpecial,
-	setProductTea,
-	setProductYogurt,
 } from "../../app/slice/fetchApi";
 import { useDispatch } from "react-redux";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
@@ -138,17 +133,16 @@ const Home = () => {
 						return null;
 					});
 					let action;
-					action = setProductCoffee(coffee);
-					dispatch(action);
-					action = setProductColdbrew(coldbrew);
-					dispatch(action);
-					action = setProductTea(tea);
-					dispatch(action);
-					action = setProductMacchiato(macchiato);
-					dispatch(action);
-					action = setProductYogurt(yogurt);
-					dispatch(action);
-					action = setProductJuice(juice);
+					const object = {
+						special: special,
+						coffee: coffee,
+						coldbrew: coldbrew,
+						tea: tea,
+						macchiato: macchiato,
+						yogurt: yogurt,
+						juice: juice,
+					};
+					action = setProductsList(object);
 					dispatch(action);
 					action = setProductSpecial(special);
 					dispatch(action);
