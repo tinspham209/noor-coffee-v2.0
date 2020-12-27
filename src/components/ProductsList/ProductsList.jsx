@@ -18,7 +18,6 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import { products as productsId } from "../../data";
 
 const ProductsList = ({ products }) => {
-	console.log("products: ", products);
 	const classes = useStyles();
 
 	const scrollToCategory = (id) => {
