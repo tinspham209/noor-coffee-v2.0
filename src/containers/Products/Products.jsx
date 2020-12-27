@@ -10,13 +10,7 @@ import {
 	YOGURT,
 } from "../../app/ItemTypes";
 import {
-	setProductCoffee,
-	setProductColdbrew,
-	setProductJuice,
-	setProductMacchiato,
 	setProductSpecial,
-	setProductTea,
-	setProductYogurt,
 	setHeroProduct,
 	setProductsList,
 } from "../../app/slice/fetchApi";
