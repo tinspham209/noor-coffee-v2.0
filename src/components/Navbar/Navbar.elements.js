@@ -37,7 +37,7 @@ export const useStyles = makeStyles((theme) => ({
 
 		padding: "10px",
 
-		display: "inline-block",
+		display: "block",
 		verticalAlign: "middle",
 	},
 
