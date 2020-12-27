@@ -20,7 +20,6 @@ const Products = () => {
 	const dispatch = useDispatch();
 	const productsList = useSelector((state) => state.api.productsList);
 	const heroProduct = useSelector((state) => state.api.heroProduct);
-	console.log("heroProduct: ", heroProduct);
 
 	const [spinner, setSpinner] = useState(true);
 
@@ -28,7 +27,6 @@ const Products = () => {
 		if (!productsList) {
 			fetchProduct()
 				.then((products) => {
-					console.log("products: ", products);
 					const special = [];
 
 					const coffee = [];
@@ -73,7 +71,6 @@ const Products = () => {
 		if (!heroProduct) {
 			fetchHeroProduct()
 				.then((data) => {
-					console.log("data: ", data);
 					const action = setHeroProduct(data);
 					dispatch(action);
 				})

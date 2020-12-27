@@ -53,7 +53,6 @@ const Home = () => {
 		if (!hero) {
 			fetchHeroData()
 				.then((data) => {
-					console.log("data: ", data);
 					const action = setHero(data);
 					dispatch(action);
 				})
