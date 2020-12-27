@@ -162,7 +162,7 @@ export const useStyles = makeStyles((theme) => ({
 		WebkitLineClamp: "2",
 
 		[theme.breakpoints.down("md")]: {
-			fontSize: "17px",
+			fontSize: "16px",
 		},
 	},
 	price: {
