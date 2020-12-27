@@ -73,6 +73,7 @@ export const useStyles = makeStyles((theme) => ({
 
 		[theme.breakpoints.down("md")]: {
 			width: "100%",
+			padding: "0",
 		},
 	},
 	sidebarMenu: {
@@ -94,11 +95,10 @@ export const useStyles = makeStyles((theme) => ({
 
 			"& ul": {
 				display: "flex",
-				overflowX: "auto",
+				overflowX: "scroll",
 				whiteSpace: "nowrap",
 				flexWrap: "no-wrap",
-				overflowScrolling: "touch",
-				WebkitOverflowScrolling: "touch",
+				WebkitOverflowScrolling: "auto",
 			},
 		},
 	},
