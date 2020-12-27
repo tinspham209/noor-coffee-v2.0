@@ -125,6 +125,7 @@ export const useStyles = makeStyles((theme) => ({
 		[theme.breakpoints.down("md")]: {
 			width: "100%",
 			border: "none",
+			paddingLeft: "0",
 		},
 	},
 	category: {
@@ -148,6 +149,12 @@ export const useStyles = makeStyles((theme) => ({
 
 		[theme.breakpoints.down("md")]: {
 			flex: "0 0 calc(50% - 30px)",
+		},
+
+		transition: "all .2s ease-in-out",
+
+		"&:hover": {
+			transform: "scale(1.05)",
 		},
 	},
 	productImage: {
