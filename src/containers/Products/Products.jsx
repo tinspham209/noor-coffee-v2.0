@@ -1,0 +1,111 @@
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchHeroProduct, fetchProduct } from "../../api";
+import {
+	COFFEE,
+	COLDBREW,
+	JUICE,
+	MACCHIATO,
+	TEA,
+	YOGURT,
+} from "../../app/ItemTypes";
+import {
+	setProductCoffee,
+	setProductColdbrew,
+	setProductJuice,
+	setProductMacchiato,
+	setProductSpecial,
+	setProductTea,
+	setProductYogurt,
+	setHeroProduct,
+	setProductsList,
+} from "../../app/slice/fetchApi";
+import { SpinnerBook, HeroPage, ProductsList } from "../../components";
+
+const Products = () => {
+	const dispatch = useDispatch();
+	const productsList = useSelector((state) => state.api.productsList);
+	const heroProduct = useSelector((state) => state.api.heroProduct);
+	console.log("heroProduct: ", heroProduct);
+
+	const [spinner, setSpinner] = useState(true);
+
+	useEffect(() => {
+		if (!productsList) {
+			fetchProduct()
+				.then((products) => {
+					console.log("products: ", products);
+					const special = [];
+
+					const coffee = [];
+					const coldbrew = [];
+					const tea = [];
+					const macchiato = [];
+					const yogurt = [];
+					const juice = [];
+
+					products.map((product, index) => {
+						if (product.projectType === COFFEE) coffee.push(product);
+						else if (product.projectType === COLDBREW) coldbrew.push(product);
+						else if (product.projectType === TEA) tea.push(product);
+						else if (product.projectType === MACCHIATO) macchiato.push(product);
+						else if (product.projectType === YOGURT) yogurt.push(product);
+						else if (product.projectType === JUICE) juice.push(product);
+
+						product.special && special.push(product);
+
+						return null;
+					});
+					let action;
+					const object = {
+						special: special,
+						coffee: coffee,
+						coldbrew: coldbrew,
+						tea: tea,
+						macchiato: macchiato,
+						yogurt: yogurt,
+						juice: juice,
+					};
+					action = setProductsList(object);
+					dispatch(action);
+					action = setProductSpecial(special);
+					dispatch(action);
+				})
+				.catch((error) => console.log("error", error));
+		}
+	}, [dispatch, productsList]);
+
+	useEffect(() => {
+		if (!heroProduct) {
+			fetchHeroProduct()
+				.then((data) => {
+					console.log("data: ", data);
+					const action = setHeroProduct(data);
+					dispatch(action);
+				})
+				.catch((error) => console.log("error", error));
+		}
+	}, [dispatch, heroProduct]);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setSpinner(false);
+		}, 500);
+	}, []);
+
+	return (
+		<>
+			{spinner ? (
+				<SpinnerBook />
+			) : (
+				<>
+					{" "}
+					<HeroPage slides={heroProduct} />
+					<ProductsList products={productsList} />
+				</>
+			)}
+		</>
+	);
+};
+
+export default Products;
