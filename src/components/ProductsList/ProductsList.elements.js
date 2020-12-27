@@ -129,6 +129,9 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	category: {
 		marginBottom: "20px",
+		"&:last-child": {
+			marginBottom: 0,
+		},
 	},
 
 	listProduct: {
