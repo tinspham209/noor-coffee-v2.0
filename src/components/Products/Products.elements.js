@@ -52,7 +52,7 @@ export const useStyles = makeStyles((theme) => ({
 	buttonProduct: {
 		maxWidth: "190px",
 		[theme.breakpoints.down("md")]: {
-			fontSize: "17px",
+			fontSize: "12px",
 		},
 	},
 	listProduct: {
@@ -80,9 +80,8 @@ export const useStyles = makeStyles((theme) => ({
 		maxWidth: "100%",
 		height: "auto",
 		verticalAlign: "middle",
-		borderRadius: "10px",
+		borderRadius: "10px 10px 0 0",
 	},
-	newLabel: {},
 
 	trendLabel: {
 		content: '""',
@@ -102,22 +101,52 @@ export const useStyles = makeStyles((theme) => ({
 		textTransform: "uppercase",
 
 		position: "absolute",
-		bottom: "20px",
+		bottom: "12px",
 		right: "0px",
 		zIndex: "9",
 
 		[theme.breakpoints.down("md")]: {
-			fontSize: "12px",
-			lineHeight: "25px",
+			fontSize: "9px",
+			lineHeight: "20px",
+		},
+	},
+
+	newLabel: {
+		content: '""',
+		color: "white",
+		backgroundColor: "#ee5375",
+
+		padding: "0 7px",
+		borderRight: "1px solid black",
+		borderTop: "1px solid black",
+		borderBottom: "1px solid black",
+
+		fontSize: "18px",
+		fontWeight: "700",
+		lineHeight: "35px",
+
+		textAlign: "center",
+		textTransform: "uppercase",
+
+		position: "absolute",
+		top: "12px",
+		left: "0px",
+		zIndex: "9",
+
+		[theme.breakpoints.down("md")]: {
+			fontSize: "9px",
+			lineHeight: "20px",
 		},
 	},
 
 	content: {
-		padding: "12px 0 0",
+		padding: "12px",
 		flexGrow: 1,
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "space-between",
+		background: "#fff",
+		borderRadius: "0 0 10px 10px",
 	},
 	title: {
 		fontSize: "24px",
@@ -131,6 +160,10 @@ export const useStyles = makeStyles((theme) => ({
 		display: "-webkit-box",
 		WebkitBoxOrient: "vertical",
 		WebkitLineClamp: "2",
+
+		[theme.breakpoints.down("md")]: {
+			fontSize: "17px",
+		},
 	},
 	price: {
 		margin: "10px 0",
@@ -138,5 +171,9 @@ export const useStyles = makeStyles((theme) => ({
 		color: "rgba(246,194,73, 1)",
 		overflow: "hidden",
 		display: "block",
+
+		[theme.breakpoints.down("md")]: {
+			fontSize: "20px",
+		},
 	},
 }));
