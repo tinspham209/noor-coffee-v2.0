@@ -14,9 +14,11 @@ const fetchApi = createSlice({
 			yogurt: null,
 			juice: null,
 		},
+		productsList: null,
 		posts: null,
 		instaPosts: null,
 		hero: null,
+		heroProduct: null,
 	},
 	reducers: {
 		setAboutData: (state, action) => {
@@ -52,6 +54,12 @@ const fetchApi = createSlice({
 		setProductJuice: (state, action) => {
 			state.products.juice = action.payload;
 		},
+		setHeroProduct: (state, action) => {
+			state.heroProduct = action.payload;
+		},
+		setProductsList: (state, action) => {
+			state.productsList = action.payload;
+		},
 	},
 });
 
@@ -69,6 +77,8 @@ export const {
 	setProductMacchiato,
 	setProductYogurt,
 	setProductJuice,
+	setHeroProduct,
+	setProductsList,
 } = actions;
 
 export default reducer;
