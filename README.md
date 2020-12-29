@@ -4,14 +4,14 @@
 
 ### Functions
 
-- Homepage
+- Introduction
 - List of products
+- Blog
 - Display store in Maps
 - Scan QR Code to delivery on Grab & Loship
 - Membership form
 - Feedback form
 - About us (coming soon)
-- Blog (coming soon)
 
 ### Screenshot
 
@@ -28,6 +28,7 @@
 ### Bugs:
 
 - Logo Img on `navbar` & `footer` has margin on IOS devices
+- Img on SinglePost on IOS devices has broken
 
 ### Directory Structure
 
