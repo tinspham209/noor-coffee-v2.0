@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
 	footer: {
-		background: "#101522",
+		background: "#191919",
 		color: "#fff",
 		fontSize: "19px",
 		display: "flex",
@@ -82,10 +82,14 @@ export const useStyles = makeStyles((theme) => ({
 	},
 
 	footer__rightLink: {
+		cursor: "pointer",
 		color: "#fff",
 		fontSize: "32px",
 		"&:nth-child(2)": {
 			marginLeft: "15px",
+		},
+		"&:hover": {
+			color: "rgba(246,194,73, 1)",
 		},
 	},
 }));
