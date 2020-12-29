@@ -91,7 +91,7 @@ const Products = () => {
 			) : (
 				<>
 					{" "}
-					<HeroPage slides={heroProduct} />
+					<HeroPage slides={heroProduct} idScrollTo="productList" />
 					<ProductsList products={productsList} />
 				</>
 			)}
