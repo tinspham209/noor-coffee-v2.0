@@ -4,11 +4,11 @@ import { useStyles } from "./HeroPage.elements";
 import { BiMouse } from "react-icons/bi";
 import { scroller } from "react-scroll";
 
-const HeroPage = ({ slides }) => {
+const HeroPage = ({ slides, idScrollTo }) => {
 	const classes = useStyles();
 
 	const scrollToNextSection = () => {
-		scroller.scrollTo("productList", { smooth: true, duration: 1000 });
+		scroller.scrollTo(`${idScrollTo}`, { smooth: true, duration: 1000 });
 	};
 
 	if (!Array.isArray(slides) || slides.length <= 0) {
@@ -69,9 +69,9 @@ const HeroPage = ({ slides }) => {
 							</div>
 							<div className={classes.content}>
 								<Typography variant="h1" className={classes.heading}>
-									MENU
+									NOOR
 								</Typography>
-								<Typography variant="h4">Danh mục sản phẩm</Typography>
+								<Typography variant="h4">COFFEE & TEA</Typography>
 							</div>
 						</div>
 					</Container>
