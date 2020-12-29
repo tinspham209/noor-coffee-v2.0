@@ -109,7 +109,6 @@ const Home = () => {
 		if (!special) {
 			fetchProduct()
 				.then((products) => {
-					console.log("products: ", products);
 					const special = [];
 
 					const coffee = [];
@@ -153,7 +152,7 @@ const Home = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			setSpinner(false);
-		}, 2500);
+		}, 2300);
 	}, []);
 
 	return (
