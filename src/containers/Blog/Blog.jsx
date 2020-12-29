@@ -48,7 +48,7 @@ const Blog = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			setSpinner(false);
-		}, 200);
+		}, 2300);
 	}, []);
 
 	return (
