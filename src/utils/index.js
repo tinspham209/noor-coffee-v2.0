@@ -15,7 +15,12 @@ export const estimateReadingTime = (string) => {
 	let result;
 
 	let stringMergeArray = [];
-	string.map((item, index) => stringMergeArray.push(item.children[0].text));
+	string.map((item, index) => {
+		if (item._type === "block") {
+			stringMergeArray.push(item.children[0].text);
+		}
+		return null;
+	});
 	const stringMerge = stringMergeArray.join("");
 
 	let textLength = stringMerge.split(" ").length;
