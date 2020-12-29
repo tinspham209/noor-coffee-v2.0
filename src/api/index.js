@@ -135,3 +135,24 @@ export const fetchHeroProduct = async () => {
 		})
 		.catch((error) => console.log("error", error));
 };
+
+export const fetchHeroBlog = async () => {
+	return await sanityClient
+		.fetch(
+			`*[_type == "heroBlog"]{
+			title,
+			subTitle,
+			mainImage{
+				asset->{
+					_id,
+					url
+				},
+				alt
+			}
+		}`
+		)
+		.then((data) => {
+			return data;
+		})
+		.catch((error) => console.log("error", error));
+};
