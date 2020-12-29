@@ -156,3 +156,27 @@ export const fetchHeroBlog = async () => {
 		})
 		.catch((error) => console.log("error", error));
 };
+
+export const fetchSinglePost = async (slug) => {
+	return await sanityClient
+		.fetch(
+			`*[slug.current == "${slug}"]{
+				title,
+				slug,
+				mainImage{
+					asset->{
+						_id,
+						url
+					}
+				},
+				body,
+				"name": author->name,
+				"authorImage": author->image,
+				publishedAt
+			}`
+		)
+		.then((data) => {
+			return data;
+		})
+		.catch((error) => console.log("error", error));
+};
