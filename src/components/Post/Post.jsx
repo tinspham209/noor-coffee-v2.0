@@ -9,7 +9,7 @@ const Post = ({ post }) => {
 
 	return (
 		<div className={classes.firstPost}>
-			<Link to="/blog" className={classes.firstPostLink}>
+			<Link to={"/blog/" + post.slug.current} className={classes.firstPostLink}>
 				<div
 					className={classes.postImg}
 					style={{
@@ -22,7 +22,7 @@ const Post = ({ post }) => {
 				<p className={classes.title}>{post.title}</p>
 				<p className={classes.description}>{post.description}</p>
 				<div className={classes.footer}>
-					<Link to="/blog">
+					<Link to={"/blog/" + post.slug.current}>
 						<Button variant="contained" className={classes.button}>
 							Xem thêm
 						</Button>
