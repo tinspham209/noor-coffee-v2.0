@@ -67,6 +67,12 @@ export const useStyles = makeStyles((theme) => ({
 		flex: "0 0 calc(33.333% - 30px)",
 		overflow: "hidden",
 
+		transition: "all .2s ease-in-out",
+
+		"&:hover": {
+			transform: "scale(1.05)",
+		},
+
 		[theme.breakpoints.down("md")]: {
 			flex: "0 0 calc(50% - 30px)",
 		},
