@@ -19,7 +19,7 @@ const RecentPosts = ({ posts }) => {
 			</div>
 			{posts.map((post, index) => (
 				<div key={index}>
-					<Link to="/blog" className={classes.post}>
+					<Link to={"/blog/" + post.slug.current} className={classes.post}>
 						<div className={classes.postImg}>
 							<LazyLoadImage
 								src={post.mainImage.asset.url}
