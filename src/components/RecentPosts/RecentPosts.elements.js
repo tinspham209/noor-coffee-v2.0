@@ -17,7 +17,7 @@ export const useStyles = makeStyles((theme) => ({
 		marginBottom: "50px",
 	},
 	headerText: {
-		color: "rgba(246,194,73, 1)",
+		color: "black",
 		fontWeight: 600,
 		position: "relative",
 
@@ -86,12 +86,25 @@ export const useStyles = makeStyles((theme) => ({
 	socialLink: {
 		color: "black",
 		fontSize: "50px",
+		width: "100%",
+		height: "100%",
+		borderRadius: "20px",
+		cursor: "pointer",
+
 		"&:nth-child(2)": {
 			marginLeft: "15px",
 		},
-
+	},
+	facebook: {
+		color: "black",
 		"&:hover": {
-			color: "rgba(246,194,73, 0.9)",
+			color: "rgba(59, 89, 152, 0.9)",
+		},
+	},
+	instagram: {
+		color: "#black",
+		"&:hover": {
+			color: "#d6249f",
 		},
 	},
 }));

@@ -43,7 +43,7 @@ export const useStyles = makeStyles((theme) => ({
 		flexDirection: "row",
 	},
 	headerText: {
-		color: "rgba(246,194,73, 1)",
+		color: "black",
 		fontWeight: 600,
 		position: "relative",
 

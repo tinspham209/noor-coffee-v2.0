@@ -14,7 +14,7 @@ export const useStyles = makeStyles((theme) => ({
 		flexDirection: "row",
 	},
 	headerText: {
-		color: "rgba(246,194,73, 1)",
+		color: "black",
 		fontWeight: 600,
 		position: "relative",
 
@@ -30,14 +30,14 @@ export const useStyles = makeStyles((theme) => ({
 		borderRadius: "20px",
 		fontSize: "20px",
 		background: "rgba(246,194,73, 1)",
-		color: "white",
+		color: "black",
 		fontWeight: "bold",
 		margin: "5px 0",
 		transition: "all 0.3s ease-in-out",
 
 		"&:hover": {
 			background: "rgba(246,194,73, 0.9)",
-			color: "black",
+			color: "white",
 		},
 
 		[theme.breakpoints.down("md")]: {

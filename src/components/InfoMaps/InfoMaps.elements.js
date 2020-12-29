@@ -77,14 +77,14 @@ export const useStyles = makeStyles((theme) => ({
 	button: {
 		borderRadius: "20px",
 		fontSize: "20px",
-		background: "rgba(246,194,73, 1)",
-		color: "white",
+		background: "rgba(246,194,73, 0.9)",
+		color: "black",
 		fontWeight: "bold",
 		transition: "all 0.3s ease-in-out",
 
 		"&:hover": {
-			background: "rgba(246,194,73, 0.9)",
-			color: "black",
+			background: "rgba(246,194,73, 0.8)",
+			color: "white",
 		},
 
 		[theme.breakpoints.down("md")]: {

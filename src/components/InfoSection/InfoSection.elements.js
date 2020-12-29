@@ -99,13 +99,13 @@ export const useStyles = makeStyles((theme) => ({
 		borderRadius: "20px",
 		fontSize: "20px",
 		background: "rgba(246,194,73, 1)",
-		color: "white",
+		color: "black",
 		fontWeight: "bold",
 		transition: "all 0.3s ease-in-out",
 
 		"&:hover": {
 			background: "rgba(246,194,73, 0.9)",
-			color: "black",
+			color: "white",
 		},
 
 		[theme.breakpoints.down("md")]: {

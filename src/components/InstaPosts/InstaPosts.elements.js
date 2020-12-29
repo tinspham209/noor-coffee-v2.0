@@ -106,7 +106,7 @@ export const useStyles = makeStyles((theme) => ({
 		borderRadius: "20px",
 		background: "rgba(246,194,73, 1)",
 
-		color: "white",
+		color: "black",
 		fontSize: "20px",
 		fontWeight: "bold",
 
@@ -114,7 +114,7 @@ export const useStyles = makeStyles((theme) => ({
 
 		"&:hover": {
 			background: "rgba(246,194,73, 0.9)",
-			color: "black",
+			color: "white",
 		},
 
 		[theme.breakpoints.down("md")]: {

@@ -47,7 +47,7 @@ const RecentPosts = ({ posts }) => {
 			</div>
 			<div className={classes.social}>
 				<a
-					className={classes.socialLink}
+					className={`${classes.socialLink} ${classes.facebook}`}
 					href="https://facebook.com/noorcoffeedn"
 					target="__blank"
 					aria-label="Facebook"
@@ -55,7 +55,7 @@ const RecentPosts = ({ posts }) => {
 					<FaFacebook />
 				</a>
 				<a
-					className={classes.socialLink}
+					className={`${classes.socialLink} ${classes.instagram}`}
 					href="https://instagram.com/noorcoffeedn"
 					target="__blank"
 					aria-label="Instagram"
