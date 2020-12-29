@@ -35,7 +35,10 @@ const HighlightPosts = () => {
 						</Link>
 					</div>
 					<div className={classes.firstPost}>
-						<Link to="/blog" className={classes.firstPostLink}>
+						<Link
+							to={"/blog/" + posts[0].slug.current}
+							className={classes.firstPostLink}
+						>
 							<div
 								className={classes.postImg}
 								style={{
@@ -48,7 +51,7 @@ const HighlightPosts = () => {
 							<p className={classes.title}>{posts[0].title}</p>
 							<p className={classes.description}>{posts[0].description}</p>
 							<div className={classes.footer}>
-								<Link to="/blog">
+								<Link to={"/blog/" + posts[0].slug.current}>
 									<Button variant="contained" className={classes.button}>
 										Xem thêm
 									</Button>
@@ -62,7 +65,10 @@ const HighlightPosts = () => {
 					<div className={classes.posts}>
 						{postsSlice.map((post, index) => (
 							<div className={classes.post} key={index}>
-								<Link to="/blog" className={classes.postLink}>
+								<Link
+									to={"/blog/" + post.slug.current}
+									className={classes.postLink}
+								>
 									<div
 										className={classes.postImg}
 										style={{
@@ -75,7 +81,7 @@ const HighlightPosts = () => {
 									<p className={classes.title}>{post.title}</p>
 									<p className={classes.description}>{post.description}</p>
 									<div className={classes.footer}>
-										<Link to="/blog">
+										<Link to={"/blog/" + post.slug.current}>
 											<Button variant="contained" className={classes.button}>
 												Xem thêm
 											</Button>
