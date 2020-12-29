@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { RecentPosts, Post, SpinnerBook, HeroPage } from "../../components";
 import { useDispatch, useSelector } from "react-redux";
-import { setHeroProduct, setPosts } from "../../app/slice/fetchApi";
-import { fetchBlogData, fetchHeroProduct } from "../../api";
+import { setHeroBlog, setPosts } from "../../app/slice/fetchApi";
+import { fetchBlogData, fetchHeroBlog } from "../../api";
 import { useStyles } from "./Blog.elements";
 import { CircularProgress, Container, Typography } from "@material-ui/core";
+import { Element } from "react-scroll";
 
 const Blog = () => {
 	const dispatch = useDispatch();
 	const classes = useStyles();
 	const posts = useSelector((state) => state.api.posts);
-	console.log("posts: ", posts);
 
 	const recentPosts = posts ? posts.slice(0, 3) : null;
-	const heroProduct = useSelector((state) => state.api.heroProduct);
+	const heroBlog = useSelector((state) => state.api.heroBlog);
 
 	const [spinner, setSpinner] = useState(true);
 
@@ -35,15 +35,15 @@ const Blog = () => {
 	}, [dispatch, posts]);
 
 	useEffect(() => {
-		if (!heroProduct) {
-			fetchHeroProduct()
+		if (!heroBlog) {
+			fetchHeroBlog()
 				.then((data) => {
-					const action = setHeroProduct(data);
+					const action = setHeroBlog(data);
 					dispatch(action);
 				})
 				.catch((error) => console.log("error", error));
 		}
-	}, [dispatch, heroProduct]);
+	}, [dispatch, heroBlog]);
 
 	useEffect(() => {
 		setTimeout(() => {
@@ -57,37 +57,41 @@ const Blog = () => {
 				<SpinnerBook />
 			) : (
 				<>
-					<HeroPage slides={heroProduct} />
+					<HeroPage slides={heroBlog} idScrollTo="blog" />
 					<div className={classes.container}>
-						<Container maxWidth="lg" className={classes.blog}>
-							<div className={classes.posts}>
-								<div className={classes.header}>
-									<Typography variant="h4" className={classes.headerText}>
-										TIN TỨC
-									</Typography>
+						<Element name="blog">
+							<Container maxWidth="lg" className={classes.blog}>
+								<div className={classes.posts}>
+									<div className={classes.header}>
+										<Typography variant="h4" className={classes.headerText}>
+											TIN TỨC
+										</Typography>
+									</div>
+									<>
+										{!posts ? (
+											<div className={classes.spinner}>
+												<CircularProgress />
+											</div>
+										) : (
+											posts.map((post, index) => (
+												<Post post={post} key={index} />
+											))
+										)}
+									</>
 								</div>
-								<>
-									{!posts ? (
+								<div className={classes.recentPosts}>
+									{!recentPosts ? (
 										<div className={classes.spinner}>
 											<CircularProgress />
 										</div>
 									) : (
-										posts.map((post, index) => <Post post={post} key={index} />)
+										<>
+											<RecentPosts posts={recentPosts} />
+										</>
 									)}
-								</>
-							</div>
-							<div className={classes.recentPosts}>
-								{!recentPosts ? (
-									<div className={classes.spinner}>
-										<CircularProgress />
-									</div>
-								) : (
-									<>
-										<RecentPosts posts={recentPosts} />
-									</>
-								)}
-							</div>
-						</Container>
+								</div>
+							</Container>
+						</Element>
 					</div>
 				</>
 			)}
