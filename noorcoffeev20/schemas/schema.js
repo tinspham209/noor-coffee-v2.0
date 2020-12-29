@@ -13,6 +13,7 @@ import product from "./product";
 import insta from "./insta";
 import hero from "./hero";
 import heroProduct from "./heroProduct";
+import heroBlog from "./heroBlog";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -30,6 +31,7 @@ export default createSchema({
 		insta,
 		hero,
 		heroProduct,
+		heroBlog,
 		// When added to this list, object types can be used as
 		// { type: 'typename' } in other document schemas
 		blockContent,
