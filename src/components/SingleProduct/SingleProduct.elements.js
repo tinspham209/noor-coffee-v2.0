@@ -118,7 +118,7 @@ export const useStyles = makeStyles((theme) => ({
 		"&::before": {
 			content: '""',
 			position: "absolute",
-			bottom: "-2px",
+			bottom: "-5px",
 			width: "30%",
 			border: "2px solid rgba(246,194,73, 1)",
 		},
