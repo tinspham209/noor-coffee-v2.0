@@ -6,6 +6,7 @@ export { default as InfoMaps } from "./InfoMaps/InfoMaps";
 export { default as InstaPosts } from "./InstaPosts/InstaPosts";
 export { default as RecentPosts } from "./RecentPosts/RecentPosts";
 export { default as SinglePost } from "./SinglePost/SinglePost";
+export { default as SingleProduct } from "./SingleProduct/SingleProduct";
 export { default as Post } from "./Post/Post";
 export { default as Navbar } from "./Navbar/Navbar";
 export { default as Footer } from "./Footer/Footer";
