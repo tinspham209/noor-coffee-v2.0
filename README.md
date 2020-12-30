@@ -1,17 +1,17 @@
 # Project: NOOR Coffee Website v2.0
 
-### Date: Sep - 2020 to present
+### Date: Dec - 2020 to present
 
 ### Functions
 
 - Introduction
-- List of products
-- Blog
+- List of products / View Single Product
+- Blogs / View Single Blog
 - Display store in Maps
 - Scan QR Code to delivery on Grab & Loship
 - Membership form
 - Feedback form
-- About us (coming soon)
+- About us
 
 ### Screenshot
 
@@ -29,6 +29,7 @@
 
 - Logo Img on `navbar` & `footer` has margin on IOS devices
 - Img on SinglePost on IOS devices has broken
+- Components is NOT re-usable
 
 ### Directory Structure
 
@@ -58,14 +59,15 @@ For the project to build, these must exist with exact filenames:
 
 - React Hooks
 - react-router-dom
-- styled-components
+- redux-toolkit
+- @sanity.io
 - Firebase
+- styled-components
+- Material-UI
 - react-icons
 - leaflet
-- react-leaflet
 - react-lazy-load-image-component
-- react-sticky-box
-- react-rating-stars-component
+- react-scroll
 - img design from https://undraw.co/
 
 ### Production
