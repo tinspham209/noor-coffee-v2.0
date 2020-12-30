@@ -112,4 +112,9 @@ export const useStyles = makeStyles((theme) => ({
 			width: "100%",
 		},
 	},
+	blockContent: {
+		"& p": {
+			fontSize: "20px",
+		},
+	},
 }));

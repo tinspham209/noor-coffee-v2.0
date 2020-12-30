@@ -50,6 +50,7 @@ const InfoSection = () => {
 											blocks={aboutData.body}
 											projectId="1nauekv7"
 											dataset="production"
+											className={classes.blockContent}
 										/>
 									</div>
 									<Link to="/about">
