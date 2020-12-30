@@ -10,6 +10,9 @@ const Products = React.lazy(() => import("./pages/Products/Products"));
 const SinglePost = React.lazy(() =>
 	import("./containers/SinglePost/SinglePost")
 );
+const SingleProduct = React.lazy(() =>
+	import("./containers/SingleProduct/SingleProduct")
+);
 
 function App() {
 	return (
@@ -24,6 +27,8 @@ function App() {
 					<Route path="/blog" exact component={Blog} />
 					<Route path="/blog/:slug" exact component={SinglePost} />
 					<Route path="/products" exact component={Products} />
+					<Route path="/products/:slug" exact component={SingleProduct} />
+
 					<Route component={NotFound} />
 				</Switch>
 				<Footer />
