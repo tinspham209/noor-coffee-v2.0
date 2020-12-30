@@ -81,7 +81,7 @@ const Products = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			setSpinner(false);
-		}, 1500);
+		}, 2300);
 	}, []);
 
 	return (
