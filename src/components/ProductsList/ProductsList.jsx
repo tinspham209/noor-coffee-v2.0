@@ -62,7 +62,9 @@ const ProductsList = ({ products }) => {
 												{products[product.id].map((productCategory, index) => (
 													<div className={classes.product} key={index}>
 														<div className={classes.productImage}>
-															<Link to="/products">
+															<Link
+																to={"/products/" + productCategory.slug.current}
+															>
 																<LazyLoadImage
 																	src={productCategory.mainImage.asset.url}
 																	alt={productCategory.mainImage.asset._id}
@@ -88,12 +90,16 @@ const ProductsList = ({ products }) => {
 															<p className={classes.price}>
 																{productCategory.price}.000Đ
 															</p>
-															<Button
-																variant="contained"
-																className={`${classes.button} ${classes.buttonProduct}`}
+															<Link
+																to={"/products/" + productCategory.slug.current}
 															>
-																TÌM HIỂU THÊM
-															</Button>
+																<Button
+																	variant="contained"
+																	className={`${classes.button} ${classes.buttonProduct}`}
+																>
+																	TÌM HIỂU THÊM
+																</Button>
+															</Link>
 														</div>
 													</div>
 												))}
