@@ -8,6 +8,7 @@ export { default as RecentPosts } from "./RecentPosts/RecentPosts";
 export { default as SinglePost } from "./SinglePost/SinglePost";
 export { default as SingleProduct } from "./SingleProduct/SingleProduct";
 export { default as Post } from "./Post/Post";
+export { default as Section } from "./Section/Section";
 export { default as Navbar } from "./Navbar/Navbar";
 export { default as Footer } from "./Footer/Footer";
 export { default as Products } from "./Products/Products";
