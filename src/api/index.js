@@ -180,3 +180,29 @@ export const fetchSinglePost = async (slug) => {
 		})
 		.catch((error) => console.log("error", error));
 };
+
+export const fetchSingleProduct = async (slug) => {
+	return await sanityClient
+		.fetch(
+			`*[slug.current == "${slug}"]{
+				title,
+				slug,
+				mainImage{
+					asset->{
+						_id,
+						url
+					}
+				},
+				body,
+				projectType,
+				special,
+				new,
+				bestSeller,
+				price
+			}`
+		)
+		.then((data) => {
+			return data;
+		})
+		.catch((error) => console.log("error", error));
+};
