@@ -38,7 +38,7 @@ const Products = (listProducts) => {
 						{products.map((product, index) => (
 							<div className={classes.product} key={index}>
 								<div className={classes.productImage}>
-									<Link to="/products">
+									<Link to={"/products/" + product.slug.current}>
 										<LazyLoadImage
 											src={product.mainImage.asset.url}
 											alt={product.mainImage.asset.alt}
@@ -60,12 +60,14 @@ const Products = (listProducts) => {
 								<div className={classes.content}>
 									<p className={classes.title}>{product.title}</p>
 									<p className={classes.price}>{product.price}.000Đ</p>
-									<Button
-										variant="contained"
-										className={`${classes.button} ${classes.buttonProduct}`}
-									>
-										TÌM HIỂU THÊM
-									</Button>
+									<Link to={"/products/" + product.slug.current}>
+										<Button
+											variant="contained"
+											className={`${classes.button} ${classes.buttonProduct}`}
+										>
+											TÌM HIỂU THÊM
+										</Button>
+									</Link>
 								</div>
 							</div>
 						))}
