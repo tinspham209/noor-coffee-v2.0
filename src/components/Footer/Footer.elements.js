@@ -9,6 +9,7 @@ export const useStyles = makeStyles((theme) => ({
 		flexDirection: "column",
 		justifyContent: "center",
 		alignItems: "center",
+		borderTop: "2px solid rgba(246,194,73, 1)",
 	},
 	footer__wrap: {
 		margin: "5px auto",
