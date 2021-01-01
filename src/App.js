@@ -8,6 +8,7 @@ const Home = React.lazy(() => import("./pages/Home/Home"));
 const Blog = React.lazy(() => import("./pages/Blog/Blog"));
 const Products = React.lazy(() => import("./pages/Products/Products"));
 const Stores = React.lazy(() => import("./pages/Stores/Stores"));
+const Feedback = React.lazy(() => import("./pages/Feedback/Feedback"));
 const SinglePost = React.lazy(() =>
 	import("./containers/SinglePost/SinglePost")
 );
@@ -30,6 +31,7 @@ function App() {
 					<Route path="/products" exact component={Products} />
 					<Route path="/products/:slug" exact component={SingleProduct} />
 					<Route path="/stores" exact component={Stores} />
+					<Route path="/feedback" exact component={Feedback} />
 					<Route component={NotFound} />
 				</Switch>
 				<Footer />
