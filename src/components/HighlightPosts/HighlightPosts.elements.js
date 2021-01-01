@@ -1,11 +1,11 @@
 import { makeStyles } from "@material-ui/core/styles";
-import bgImg from "../../assets/img/bg-white.webp";
+import bgImg from "../../assets/img/bg_blog_home.webp";
 
 export const useStyles = makeStyles((theme) => ({
 	highlightPosts: {
 		color: "black",
 		padding: "80px 0",
-		background: `url(${bgImg}) no-repeat right top, #f5f5f5`,
+		background: `url(${bgImg}) no-repeat right top, #191919`,
 		[theme.breakpoints.down("md")]: {},
 	},
 	header: {
@@ -14,7 +14,7 @@ export const useStyles = makeStyles((theme) => ({
 		flexDirection: "row",
 	},
 	headerText: {
-		color: "black",
+		color: "white",
 		fontWeight: 600,
 		position: "relative",
 

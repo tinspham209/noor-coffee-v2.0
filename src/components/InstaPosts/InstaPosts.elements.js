@@ -1,10 +1,10 @@
 import { makeStyles } from "@material-ui/core/styles";
-import bgImg from "../../assets/img/bg_blog_home.webp";
+import bgImg from "../../assets/img/bg-white.webp";
 export const useStyles = makeStyles((theme) => ({
 	instaPosts: {
-		color: "white",
+		color: "black",
 		padding: "50px 0",
-		background: `url(${bgImg}) no-repeat left top, #191919`,
+		background: `url(${bgImg}) no-repeat left top, #f5f5f5`,
 	},
 	spinner: {
 		display: "flex",

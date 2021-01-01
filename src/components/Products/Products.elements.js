@@ -4,7 +4,7 @@ import bgImg from "../../assets/img/bg-white.webp";
 export const useStyles = makeStyles((theme) => ({
 	products: {
 		color: "black",
-		padding: "80px 0",
+		padding: "80px 0 0 0",
 		background: `url(${bgImg}) no-repeat right top, #f5f5f5`,
 		[theme.breakpoints.down("md")]: {},
 	},

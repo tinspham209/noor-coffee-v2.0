@@ -6,6 +6,7 @@ import {
 	InfoSection,
 	InstaPosts,
 	Products,
+	SectionLink,
 	SpinnerBook,
 } from "../../components";
 import {
@@ -34,6 +35,19 @@ import {
 	YOGURT,
 } from "../../app/ItemTypes";
 import { useSelector } from "react-redux";
+import feedbackImg from "../../assets/img/feedback.svg";
+import { AiOutlineStar } from "react-icons/ai";
+
+const feedback = {
+	subHeader: "NOOR Coffee & Tea",
+	header: "Đánh giá dịch vụ của NOOR",
+	description:
+		"Mỗi lượt góp ý của bạn sẽ giúp cho NOOR cải thiện dịch vụ để phục vụ bạn tốt hơn nữa!",
+	linkBtn: "/feedback",
+	contentBtn: "Đánh giá",
+	img: feedbackImg,
+	icon: <AiOutlineStar />,
+};
 
 const Home = () => {
 	const [spinner, setSpinner] = useState(true);
@@ -169,13 +183,25 @@ const Home = () => {
 						<InfoMaps />
 					</LazyLoadComponent>
 					<LazyLoadComponent>
+						<Products products={special} />
+					</LazyLoadComponent>
+					<LazyLoadComponent>
 						<HighlightPosts />
 					</LazyLoadComponent>
 					<LazyLoadComponent>
 						<InstaPosts />
 					</LazyLoadComponent>
 					<LazyLoadComponent>
-						<Products products={special} />
+						<SectionLink
+							subHeader={feedback.subHeader}
+							header={feedback.header}
+							description={feedback.description}
+							linkBtn={feedback.linkBtn}
+							img={feedback.img}
+							contentBtn={feedback.contentBtn}
+							iconBtn={feedback.icon}
+							dark
+						/>
 					</LazyLoadComponent>
 				</>
 			)}
