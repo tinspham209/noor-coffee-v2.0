@@ -38,7 +38,7 @@ const Membership = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			setSpinner(false);
-		}, 200);
+		}, 2300);
 	}, []);
 
 	useEffect(() => {
