@@ -1,6 +1,6 @@
 import React from "react";
 import { SectionLink } from "../../components";
-import { AiOutlineStar } from "react-icons/ai";
+import { AiOutlineHome } from "react-icons/ai";
 import Img from "../../assets/img/developing.svg";
 const feedback = {
 	subHeader: "NOOR Coffee & Tea",
@@ -9,7 +9,7 @@ const feedback = {
 	linkBtn: "/",
 	contentBtn: "Trang chủ",
 	img: Img,
-	icon: <AiOutlineStar />,
+	icon: <AiOutlineHome />,
 };
 
 const About = () => {
