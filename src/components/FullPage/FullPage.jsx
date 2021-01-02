@@ -67,12 +67,12 @@ const FullPage = () => {
 											/>
 											<Container maxWidth="lg">
 												<div className={classes.heroContent}>
-													<p className={classes.heroContentTitle}>
+													<Typography className={classes.heroContentTitle}>
 														{slide.title}
-													</p>
-													<p className={classes.heroContentSubTitle}>
+													</Typography>
+													<Typography className={classes.heroContentSubTitle}>
 														{slide.subTitle}
-													</p>
+													</Typography>
 												</div>
 											</Container>
 										</div>
