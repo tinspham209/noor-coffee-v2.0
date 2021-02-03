@@ -1,35 +1,80 @@
 # Project: NOOR Coffee Website v2.0
 
-### Date: Dec - 2020 to present
-
-### Functions
-
-- Introduction
-- List of products / View Single Product
-- Blogs / View Single Blog
-- Display store in Maps
-- Scan QR Code to delivery on Grab & Loship
-- Membership form
-- Feedback form
-- About us
-
-### Screenshot
-
-<img src="screenshot.png" alt="is-developing"/>
+### Date: Dec - 2020 to Jan - 2021
 
 ### Releases
 
-- https://noordn.cf
+- Client: https://noordn.cf
+- Server: https://server-noorcoffee.sanity.studio/
 
-### Plan Of Action
+### Functions
 
-### Next Steps:
+Responsive Design Optimized with 2 screen: Large Screen(>=1280px) and Mobile Screen(<1280px)
 
-### Bugs:
+**Client:**
 
-- Logo Img on `navbar` & `footer` has margin on IOS devices
-- Img on SinglePost on IOS devices has broken
-- Components is NOT re-usable
+- Homepage
+- Products / Single Product
+- Blogs / Blog post
+- Store - Display on Maps
+- Membership register
+- Feedback register
+- About us
+
+**Server:**
+
+- Sanity
+  - Blog Posts Management
+  - Author of Blog Post Management
+  - Products Management
+  - Images Management
+- Firebase / Google Sheet
+
+  - Membership Management
+  - Feedback Management
+
+### Screenshot
+
+**Homepage:**
+
+<img src="./screenshot/homepage.png" alt="homepage" width="640"/>
+
+**Blog Posts / Single Post:**
+
+<img src="./screenshot/blog-posts.png" alt="homepage" width="640"/>
+
+**List of Products / Single Product:**
+
+<img src="./screenshot/products.png" alt="homepage" width="640"/>
+
+**Feedback / Membership register:**
+
+<img src="./screenshot/feedback-membership.png" alt="homepage" width="640"/>
+
+**Blog Posts Management:**
+
+<img src="./screenshot/server-posts-management.png" alt="homepage" width="640"/>
+
+**Products Management:**
+
+<img src="./screenshot/server-product-management.png" alt="homepage" width="640"/>
+
+## Installation Guide
+
+### Tech-Stack
+
+- React Hooks
+- react-router-dom
+- redux-toolkit
+- @sanity.io
+- Firebase
+- styled-components
+- Material-UI
+- react-icons
+- leaflet
+- react-lazy-load-image-component
+- react-scroll
+- img design from https://undraw.co/
 
 ### Directory Structure
 
@@ -53,29 +98,16 @@ For the project to build, these must exist with exact filenames:
 - `src/GlobalStyles.js` is the Global Styles
 - `src/App.js` is the Router
 
-## Installation Guide
-
-### Tech-Stack
-
-- React Hooks
-- react-router-dom
-- redux-toolkit
-- @sanity.io
-- Firebase
-- styled-components
-- Material-UI
-- react-icons
-- leaflet
-- react-lazy-load-image-component
-- react-scroll
-- img design from https://undraw.co/
-
 ### Production
 
+**Setup Server**
+
 - Clone this project
 
+- Go to `./noorcoffeev20`
+
 ```
-git clone https://github.com/tinspham209/noor-coffee
+cd ./noorcoffeev20
 ```
 
 - Install dependencies
@@ -84,28 +116,33 @@ git clone https://github.com/tinspham209/noor-coffee
 npm install
 ```
 
-- Start the server
+- Start packager, server is running on PORT 5000
 
 ```
 npm start
 ```
 
-### Development
+**Setup Client**
 
-- Clone this project
+- cd to root folder
+
 - Install dependencies
 
 ```
 npm install
 ```
 
-- Start packager
+- Start packager, server is running on PORT 3000
 
 ```
 npm start
 ```
 
-### Components function:
+### Bugs:
+
+- Logo Img on `navbar` & `footer` has margin on IOS devices
+- Img on SinglePost on IOS devices has broken
+- Components is NOT re-usable
 
 ### How to name a folder and a file
 
