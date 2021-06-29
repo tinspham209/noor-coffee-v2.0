@@ -14,26 +14,30 @@ import insta from "./insta";
 import hero from "./hero";
 import heroProduct from "./heroProduct";
 import heroBlog from "./heroBlog";
+import komProduct from "./komProduct";
+import komPost from "./komPost";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
-	// We name our schema
-	name: "default",
-	// Then proceed to concatenate our document type
-	// to the ones provided by any plugins that are installed
-	types: schemaTypes.concat([
-		// The following are document types which will appear
-		// in the studio.
-		post,
-		author,
-		about,
-		product,
-		insta,
-		hero,
-		heroProduct,
-		heroBlog,
-		// When added to this list, object types can be used as
-		// { type: 'typename' } in other document schemas
-		blockContent,
-	]),
+  // We name our schema
+  name: "default",
+  // Then proceed to concatenate our document type
+  // to the ones provided by any plugins that are installed
+  types: schemaTypes.concat([
+    // The following are document types which will appear
+    // in the studio.
+    post,
+    author,
+    about,
+    product,
+    insta,
+    hero,
+    heroProduct,
+    heroBlog,
+    komProduct,
+    komPost,
+    // When added to this list, object types can be used as
+    // { type: 'typename' } in other document schemas
+    blockContent,
+  ]),
 });
