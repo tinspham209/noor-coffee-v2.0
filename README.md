@@ -4,7 +4,7 @@
 
 ### Releases
 
-- Client: https://noordn.cf
+- Client: https://noor-cf.web.app/
 - Server: https://server-noorcoffee.sanity.studio/
 
 ### Functions
